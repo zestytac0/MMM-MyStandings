@@ -9,10 +9,10 @@ Module.register("MMM-MyStandings",{
 		lang: config.language,
 		url: "http://site.web.api.espn.com/apis/v2/sports/",
 		sports: [
-			{ league: "NBA", groups: ["Atlantic", "Central", "Southeast", "Northwest", "Pacific", "Southwest"] },
-			{ league: "MLB", groups: ["American League East", "American League Central", "American League West", "National League East", "National League Central", "National League West"] },
-			{ league: "NFL", groups: ["AFC East", "AFC North", "AFC South", "AFC West", "NFC East", "NFC North", "NFC South", "NFC West"] },
-			{ league: "NHL", groups: ["Atlantic Division", "Metropolitan Division", "Central Division", "Pacific Division"] },
+			{ league: "NBA", groups: ["East", "West", "Atlantic", "Central", "Southeast", "Northwest", "Pacific", "Southwest"] },
+			{ league: "MLB", groups: ["American League", "National League", "American League East", "American League Central", "American League West", "National League East", "National League Central", "National League West"] },
+			{ league: "NFL", groups: ["AFC", "NFC", "AFC East", "AFC North", "AFC South", "AFC West", "NFC East", "NFC North", "NFC South", "NFC West"] },
+			{ league: "NHL", groups: ["East", "West", "Atlantic Division", "Metropolitan Division", "Central Division", "Pacific Division"] },
 			{ league: "MLS", groups: ["Eastern Conference", "Western Conference"] },
 			{ league: "NCAAF", groups: ["American Athletic - East", "American Athletic - West", "Atlantic Coast Conference - Atlantic", "Atlantic Coast Conference - Coastal",
 										"Big 12 Conference", "Big Ten - East", "Big Ten - West", "Conference USA - East", "Conference USA - West",
@@ -34,6 +34,81 @@ Module.register("MMM-MyStandings",{
 		fadeSpeed: 2000,
 	},
 
+	groups: {
+    /* NHL : {
+
+      //divisions
+      "Atlantic": ["BOS", "BUF", "DET", "FLA", "MTL", "OTT", "TB", "TOR"],
+      "Metropolitain": ["CAR", "CLB", "NJ", "NYI", "NYR", "PIT", "PHI", "WSH"],
+      "Central": ["CHI", "COL", "DAL", "MIN", "NSH", "STL", "WPG"],
+      "Pacific": ["ANA", "ARI", "CGY", "EDM", "LA", "SJ", "VAN", "VGK"],
+
+      //conferences
+      "East": ["BOS", "BUF", "CAR", "CLB", "DET", "FLA", "MTL", "NJ", "NYI", "NYR", "PIT", "PHI", "OTT", "TB", "TOR", "WSH"],
+      "West": ["ANA", "ARI", "CGY", "CHI", "COL", "DAL", "EDM", "LA", "MIN", "NSH", "SJ", "STL", "VAN", "VGK", "WPG"],
+
+      //all Canadian teams
+      "Canadian": ["CGY", "EDM", "MTL", "OTT", "TOR", "VAN", "WPG"]
+    },
+
+    MLB : {
+
+      //divisions
+      "AL East": ["BAL", "BOS", "NYY", "TB", "TOR"],
+      "AL Central": ["CLE", "CWS", "DET", "KC", "MIN"],
+      "AL West": ["HOU", "LAA", "OAK", "SEA", "TEX"],
+      "NL East": ["ATL", "MIA", "NYM", "PHI", "WAS"],
+      "NL Central": ["CHC", "CIN", "MIL", "PIT", "STL"],
+      "NL West": ["ARI", "COL", "LAD", "SD", "SF"],
+
+      //leagues
+      "American League": ["BAL", "BOS", "CLE", "CWS", "DET", "HOU", "LAA", "KC", "MIN", "NYY", "OAK", "SEA", "TB", "TEX", "TOR"],
+      "National League": ["ARI", "ATL", "CHC", "CIN", "COL", "LAD", "MIA", "MIL", "NYM", "PHI", "PIT", "SD", "SF", "STL", "WAS"]
+
+    },
+
+    NBA : {
+
+      //divisions
+      "Atlantic": ["BKN", "BOS", "NY", "PHI", "TOR"],
+      "Central": ["CHI", "CLE", "DET", "IND", "MIL"],
+      "Southeast": ["ATL", "CHA", "MIA", "ORL", "WSH"],
+      "Northwest": ["DEN", "MIN", "OKC", "POR", "UTAH"],
+      "Pacific": ["GS", "LAC", "LAL", "PHX", "SAC"],
+      "Southwest": ["DAL", "HOU", "MEM", "NO", "SA"],
+
+      //conferences
+      "East": ["ATL", "BKN", "BOS", "CHA", "CHI", "CLE", "DET", "IND", "MIA", "MIL", "NY", "ORL", "PHI", "TOR", "WSH"],
+      "West": ["DAL", "DEN", "GS", "HOU", "LAC", "LAL", "MEM", "MIN", "NO", "OKC", "PHX", "POR", "SA", "SAC", "UTAH"]
+
+    },
+
+    NFL : {
+
+      //divisions
+      "AFC East" : ["NE", "BUF", "MIA", "NYJ"],
+      "AFC North" : ["BAL", "CIN", "CLE", "PIT"],
+      "AFC South" : ["JAX", "HOU", "IND", "TEN"],
+      "AFC West" : ["DEN", "KC", "LAC", "OAK"],
+      "NFC East" : ["DAL", "NYG", "PHI", "WAS"],
+      "NFC North" : ["CHI", "DET", "GB", "MIN"],
+      "NFC South" : ["ATL", "CAR", "NO", "TB"],
+      "NFC West" : ["ARI", "LA", "SEA", "SF"],
+
+      //conferences
+      "AFC" : ["BAL", "BUF", "CIN", "CLE", "DEN", "HOU", "IND", "JAX", "KC", "LAC", "MIA", "NE", "NYJ", "OAK", "PIT", "TEN"],
+      "NFC" : ["ARI", "ATL", "CAR", "CHI", "DAL", "DET", "GB", "LA", "MIN", "NO", "NYG", "PHI", "SEA", "SF", "TB", "WAS"]
+    },
+
+    MLS : {
+
+      //conferences
+      "East" : ["ATL", "CHI", "CLB", "DC", "MTL", "NY", "NYC", "NE", "ORL", "PHI", "TOR"],
+      "West" : ["COL", "DAL", "HOU", "KC", "LA", "MIN", "POR", "RSL", "SEA", "SJ", "VAN"]
+
+    },
+    */
+	
 	SOCCER_LEAGUE_PATHS: {
 		//International Soccer
 		"AFC_ASIAN_CUP": "soccer/afc.cup",
