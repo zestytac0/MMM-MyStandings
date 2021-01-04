@@ -35,7 +35,7 @@ Module.register("MMM-MyStandings",{
 	},
 
 	groups: {
-    /* NHL : {
+     NHL : {
 
       //divisions
       "Atlantic": ["BOS", "BUF", "DET", "FLA", "MTL", "OTT", "TB", "TOR"],
@@ -107,7 +107,7 @@ Module.register("MMM-MyStandings",{
       "West" : ["COL", "DAL", "HOU", "KC", "LA", "MIN", "POR", "RSL", "SEA", "SJ", "VAN"]
 
     },
-    */
+    
 	
 	SOCCER_LEAGUE_PATHS: {
 		//International Soccer
